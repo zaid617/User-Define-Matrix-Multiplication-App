@@ -107,7 +107,7 @@ function calc() {
 
 
 
-
+        document.querySelector('#result').innerHTML ="";
     for (let i = 0; i < input_1; i++) {
 
         for (let j = 0; j < input_2; j++) {
@@ -117,7 +117,6 @@ function calc() {
         document.querySelector('#result').innerHTML += ("<br>")
     }
 
-        document.getElementById(`div_${i}${j}`).innerText ="";
     for (i = 0; i < input_1; i++) {
         for (j = 0; j < input_2; j++) {
             document.getElementById(`div_${i}${j}`).innerText += result[i][j];
