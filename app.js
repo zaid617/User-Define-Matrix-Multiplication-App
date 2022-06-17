@@ -78,6 +78,7 @@ function calc() {
     let mats_1 = [[], [], [], [], [], [], [], [], [], []];
     let mats_2 = [[], [], [], [], [], [], [], [], [], []];
     let result = [[], [], [], [], [], [], [], [], [], []];
+    let text = [[], [], [], [], [], [], [], [], [], []];
 
     // getting values from 1st matrix 
     for (let i = 0; i < input_1; i++) {
@@ -91,16 +92,19 @@ function calc() {
         for (j = 0; j < input_2; j++) {
             mats_2[i][j] = Number(document.getElementById(`mat2_${[i]}${[j]}`).value);
         }
-
+    
+        
     }
     // multiplication of martix 1 and 2
+    
     for(let i = 0; i < input_1; i++){
-        result[i] = []
         for(let j = 0; j < input_1; j++){
           result[i][j] = 0
+          text[i][j] = 0
           for(let k = 0; k < input_1; k++){    
             result[i][j] += mats_1[i][k] * mats_2[k][j];
-          }  
+            text[i][j] += (`${mats_1[i][k]}X${mats_2[k][j]}+`)
+        }  
         }
         
       }
@@ -119,7 +123,7 @@ function calc() {
 
     for (i = 0; i < input_1; i++) {
         for (j = 0; j < input_2; j++) {
-            document.getElementById(`div_${i}${j}`).innerText += result[i][j];
+            document.getElementById(`div_${i}${j}`).innerText += (`${text[i][j]}=${result[i][j]}`);
         }
 
     }
