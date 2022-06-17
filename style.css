@@ -5,7 +5,7 @@
 }
 body{
     background:linear-gradient(#6A67CE,#EEF3D2) ;
-    height: 150vh;
+    height: 100vh;
 }
 
 header{
@@ -119,13 +119,13 @@ label{
     text-align: center;
     width: 33px;
     height: 33px;
-    margin: 8px;
+    margin: 5px;
     border: 2px solid black;
     
 }
 .value{
     text-align: center;
-    margin: 8px;
+    margin: 5px;
     font-size: 27px;
     color: white;
     text-shadow: 0px 0px 8px black;

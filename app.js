@@ -3,6 +3,11 @@ function start() {
     // changing the display of form2 from none to block
     let display = document.querySelector('#form2')
 
+
+    // changing height of body
+    let body = document.querySelector('body');
+    body.style.height = '100%';
+
     // target the values of rows and columns
     let input_1 = document.querySelector('#input_1').value;
     let input_2 = document.querySelector('#input_2').value;
@@ -99,11 +104,11 @@ function calc() {
     
     for(let i = 0; i < input_1; i++){
         for(let j = 0; j < input_1; j++){
-          result[i][j] = 0
-          text[i][j] = 0
+          result[i][j] = 0;
+          text[i][j] = 0;
           for(let k = 0; k < input_1; k++){    
             result[i][j] += mats_1[i][k] * mats_2[k][j];
-            text[i][j] += (`${mats_1[i][k]}X${mats_2[k][j]}+`)
+            text[i][j] += (`${mats_1[i][k]} X ${mats_2[k][j]} + `)
         }  
         }
         
